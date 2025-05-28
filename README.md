@@ -40,7 +40,7 @@
       border: 5px solid #004a99; /* أزرق داكن */
       border-right: 20px solid #ffc107; /* أصفر */
       border-radius: 10px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
     }
     .question p {
       margin: 0 0 10px;
