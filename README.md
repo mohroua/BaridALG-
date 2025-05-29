@@ -55,43 +55,6 @@
     h2 {
       color: #FF0000;
     }
-   <title>عرض النتيجة</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffc107;
-      font-family: Arial, sans-serif;
-    }
-
-    .result-box {
-      display: none;
-      background-color: #ffc107; /* لون أصفر – يمكنك تغييره */
-      color: #004a99;
-      padding: 15px 30px;
-      font-size: 1.8em;
-      border-radius: 10px;
-      margin: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    button {
-      margin-top: 100px;
-      padding: 30px 60px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    footer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
   </style>
 </head>
 <body>
