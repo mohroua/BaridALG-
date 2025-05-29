@@ -54,7 +54,28 @@
     }
     h2 {
       color: #FF0000;
-    }
+  }
+  .result {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.result.success {
+  color: green;
+  background-color: #d4edda;
+  border: 2px solid green;
+}
+
+.result.fail {
+  color: red;
+  background-color: #f8d7da;
+  border
+: 2px solid red;
+}
   </style>
 </head>
 <body>
@@ -145,7 +166,7 @@
   </div>
 
   <button type="button" onclick="showResult()">عرض النتيجة</button>
-</form>
+<form onsubmit="showResult(); return false;">
 
 <div class="result" id="result"></div>
 
