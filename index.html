@@ -1,694 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>اختبار بريد الجزائر - الجانب المالي والإداري</title>
-  <style>
-    body {
-      font-family: 'arial', sans-serif;
-      background-color: #fff;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .header {
-      text-align: right;
-      margin-bottom: 30px;
-      width: 100%;
-    }
-
-    .header img {
-      width: 900px;  
-      height: auto;  
-      display: block;
-      margin: 0 auto;
-      border-radius: 30px;
-    }
-
-    .title {
-      font-size: 70px;
-      font-weight: bold;
-      margin: 50px auto;
-      text-align: center;
-      width: fit-content;
-      color: #004a99;
-    }
-
-    .container {
-      padding: 20px;
-      width: 80%;
-    }
-
-    .question {
-      background-color: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 5px solid #004a99;
-      border-right: 20px solid #ffc107;
-      border-radius: 10px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .question p {
-      margin: 0 0 10px;
-      font-weight: bold;
-      color: #004a99;
-    }
-
-    .question label {
-      display: block;
-      margin: 4px 0;
-      cursor: pointer;
-    }
-
-    h2 {
-      color: #FF0000;
-      text-align: center;
-    }
-
-    button {
-      margin: 50px auto;
-      padding: 20px 50px;
-      font-size: 1.2em;
-      cursor: pointer;
-      background-color: #004a99;
-      color: white;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .result {
-      display: block;
-      margin: 30px;
-      padding: 20px 40px;
-      font-size: 2em;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .success {
-      background-color: #d4edda;
-      color: #155724;
-      border: 3px solid #28a745;
-    }
-
-    .fail {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 3px solid #dc3545;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="header">
-    <img src="https://i.postimg.cc/8ChN66JP/Merged-Images.png" alt="شعار بريد الجزائر">
-    <h1 class="title">اختبار بريد الجزائر الرقمي</h1>
-    <h2>ملاحظة: هذا عبارة عن إختبار تجريبي</h2>
-  </div>
-
-  <div class="container">
-    <!-- الأسئلة -->
-    <form id="quizForm">
-     
-أنت قلت:
-أريد عرض النتيجة تكون في الوسط بلون اصفر سأختاره بنفسي
-قال ChatGPT:
-تمام! لو كنت تقصد عرض نتيجة (مثل نص أو رقم أو نتيجة عملية حسابية) في الوسط من الشاشة وبلون أصفر تحدده أنت، فإليك مثال بلغة HTML وCSS (ممكن استخدامه في تطبيقات الويب أو داخل WebView في تطبيقات أندرويد مثلاً):
-
-🟡 مثال بسيط:
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>عرض النتيجة</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center; /* أفقي */
-      align-items: center;     /* عمودي */
-      background-color: #222;
-      font-family: Arial, sans-serif;
-    }
-
-    .result {
-      background-color: #FFD700; /* هذا لون أصفر ذهبي – يمكنك تغييره */
-      color: black;
-      padding: 20px 40px;
-      font-size: 2em;
-      border-radius: 10px;
-      box-shadow: 0 0 15px
-أنت قلت:
-<button type="button" onclick="showResult()">عرض النتيجة</button>
-</form>
-قال ChatGPT:
-ممتاز! بما إنك تستخدم زرًا لعرض النتيجة عند الضغط عليه (onclick="showResult()")، فخليني أجهز لك كودًا كاملاً يحقق المطلوب:
-
-النتيجة تظهر في وسط الشاشة.
-
-يتم عرضها عند الضغط على زر "عرض النتيجة".
-
-لون الخلفية للنص أصفر يمكنك تغييره بسهولة.
-
-✅ كود HTML + CSS + JavaScript:
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>عرض النتيجة</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-
-    .result-box {
-      display: none; /* مخفي بالبداية */
-      background-color: #FFD700; /* لون أصفر – يمكن تغييره */
-      color: black;
-      padding: 20px 40px;
-      font-size: 2em;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-  <button type="button" onclick="showResult()">عرض النتيجة</button>
-
-  <div id="resultBox" class="result-box">النتيجة هي: 42</div>
-
-  <script>
-    function showResult() {
-      document.getElementById("resultBox").style.display = "block";
-    }
-  </script>
-
-</body>
-</html>
-🎨 تغيير اللون الأصفر:
-لتغيير اللون، فقط استبدل القيمة #FFD700 في background-color بلونك المفضل (مثل #FFFF00 أو اسم لون مثل yellow).
-
-هل تريد أن أجعل النتيجة تظهر برسوم متحركة أو تظهر لفترة معينة ثم تختفي؟
-
-أنت قلت:
-علما انها في اخر الصفحة
-قال ChatGPT:
-شكرًا للتوضيح! بما أن النتيجة تظهر في آخر الصفحة (أسفلها)، لكنك لا تزال تريد أن تكون في وسط العرض أفقيًا وبلون أصفر، فخليني أعدّل الكود بحيث تبقى في الأسفل، لكن:
-
-تظهر عند الضغط على الزر.
-
-تكون في منتصف الصفحة أفقيًا (center horizontally).
-
-تكون بلون أصفر من اختيارك.
-
-الزر في الأعلى أو الوسط، والنتيجة بأسفل الصفحة.
-
-✅ كود محدث:
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>عرض النتيجة</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-
-    .result-box {
-      display: none;
-      background-color: #FFD700; /* لون أصفر – يمكنك تغييره */
-      color: black;
-      padding: 15px 30px;
-      font-size: 1.8em;
-      border-radius: 10px;
-      margin: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    button {
-      margin-top: 100px;
-      padding: 10px 20px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    footer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-  </style>
-</head>
-<body>
-
-  <button type="button" onclick="showResult()">عرض النتيجة</button>
-
-  <footer>
-    <div id="resultBox" class="result-box">النتيجة هي: 42</div>
-  </footer>
-
-  <script>
-    function showResult() {
-      document.getElementById("resultBox").style.display = "block";
-    }
-  </script>
-
-</body>
-</html>
-🔧 ملاحظات:
-عنصر footer يحفظ النتيجة بأسفل الصفحة، وdisplay: flex فيه يضمن تمركزها أفقيًا.
-
-تستطيع تغيير اللون في .result-box من #FFD700 إلى أي لون يعجبك.
-
-هل تحب أضيف تأثير ظهور أو حركة للنتيجة؟
-
-أنت قلت:
-عدل ما طلبت منك تعديله :
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>اختبار بريد الجزائر - الجانب المالي والإداري</title>
-  <style>
-    body {
-       font-family: 'arial', sans-serif;
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-  direction: rtl;
-    }
-    .header {
-      text-align: right;
-      margin-bottom: 30px;
-    }
-    .header img {
-      width: 900px;  
-  height: auto;  
-  display: block;
-  margin: 0 auto;
-  border-radius: 30px; /* ← لجعل الحواف دائرية */
-    }
-   .title {
-  font-size: 70px;
-  font-weight: bold;
-  margin: 50px auto;       /* ← تصحيح */
-  text-align: center;      /* ← لتوسيط النص نفسه */
-  width: fit-content;      /* ← يجعل العنصر بعرض النص فقط */
-  color: #004a99;
-    }
-    .container {
-      padding: 20px;
-    }
-    .question {
-      background-color: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 5px solid #004a99; /* أزرق داكن */
-      border-right: 20px solid #ffc107; /* أصفر */
-      border-radius: 10px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    .question p {
-      margin: 0 0 10px;
-      font-weight: bold;
-      color: #004a99;
-    }
-    .question label {
-      display: block;
-      margin: 4px 0;
-      cursor: pointer;
-    }
-    h2 {
-      color: #FF0000;
-    }
-   <title>عرض النتيجة</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffc107;
-      font-family: Arial, sans-serif;
-    }
-
-    .result-box {
-      display: none;
-      background-color: #ffc107; /* لون أصفر – يمكنك تغييره */
-      color: #004a99;
-      padding: 15px 30px;
-      font-size: 1.8em;
-      border-radius: 10px;
-      margin: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    button {
-      margin-top: 100px;
-      padding: 30px 60px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    footer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
-  </style>
-</head>
-<body>
-
-  <div class="header">
-    <img src="https://i.postimg.cc/8ChN66JP/Merged-Images.png" alt="شعار بريد الجزائر">
-    <h1 class="title">اختبار بريد الجزائر الرقمي</h1>
-    <h2>ملاحظة: هذا عبارة عن إختبار تجريبي</h2>
-  <!-- الأسئلة -->
- <div class="question">
-    <p>1. زبون فقد بطاقته الذهبية، ما هي أول خطوة يقوم بها؟</p>
-    <label><input type="radio" name="q1" value="ج"> ج) يقوم بتجميد البطاقة ويقدم طلب تعويض</label><br>
-    <label><input type="radio" name="q1" value="أ"> أ) يطلب بطاقة جديدة مباشرة</label><br>
-    <label><input type="radio" name="q1" value="ب"> ب) يودع شكوى في الشرطة فقط</label><br>
-    <label><input type="radio" name="q1" value="د"> د) لا يفعل شيئاً</label>
-  </div>
-
-  <div class="question">
-    <p>2. ما هو رقم الاتصال المجاني لبريد الجزائر؟</p>
-    <label><input type="radio" name="q2" value="أ"> أ) 1530</label><br>
-    <label><input type="radio" name="q2" value="ب"> ب) 1055</label><br>
-    <label><input type="radio" name="q2" value="ج"> ج) 3003</label><br>
-    <label><input type="radio" name="q2" value="د"> د) 112</label>
-  </div>
-
-  <div class="question">
-    <p>3. إذا كان الزبون يعاني من تأخر في تحويل مالي، ما الخطوة الصحيحة؟</p>
-    <label><input type="radio" name="q3" value="ج"> ج) فحص العملية وتقديم تبرير رسمي</label><br>
-    <label><input type="radio" name="q3" value="أ"> أ) إخباره بالانتظار فقط</label><br>
-    <label><input type="radio" name="q3" value="ب"> ب) تجاهل الشكوى</label><br>
-    <label><input type="radio" name="q3" value="د"> د) توجيهه لمكتب آخر عشوائياً</label>
-  </div>
-
-  <div class="question">
-    <p>4. ما هي أقصى مدة صلاحية للبطاقة الذهبية؟</p>
-    <label><input type="radio" name="q4" value="ب"> ب) ثلاث سنوات</label><br>
-    <label><input type="radio" name="q4" value="أ"> أ) سنة</label><br>
-    <label><input type="radio" name="q4" value="ج"> ج) خمس سنوات</label><br>
-    <label><input type="radio" name="q4" value="د"> د) لا تنتهي</label>
-  </div>
-
-  <div class="question">
-    <p>5. ما المقصود بخدمة “BaridiMob”؟</p>
-    <label><input type="radio" name="q5" value="ب"> ب) تطبيق للهاتف يتيح خدمات بريدية ومالية</label><br>
-    <label><input type="radio" name="q5" value="أ"> أ) موقع إلكتروني للتوظيف</label><br>
-    <label><input type="radio" name="q5" value="ج"> ج) خدمة إرسال طرود</label><br>
-    <label><input type="radio" name="q5" value="د"> د) بطاقة دفع دولية</label>
-  </div>
-
-  <div class="question">
-    <p>6. زبون يودع 12000 دج ثم يرسل حوالة بـ 3500 دج ويشتري طوابع بـ 1000 دج، كم يبقى له؟</p>
-    <label><input type="radio" name="q6" value="أ"> أ) 7500 دج</label><br>
-    <label><input type="radio" name="q6" value="ب"> ب) 6500 دج</label><br>
-    <label><input type="radio" name="q6" value="ج"> ج) 8500 دج</label><br>
-    <label><input type="radio" name="q6" value="د"> د) 8000 دج</label>
-  </div>
-
-  <div class="question">
-    <p>7. ما هي المؤسسة التي تنظم قطاع البريد والمواصلات في الجزائر؟</p>
-    <label><input type="radio" name="q7" value="ب"> ب) سلطة الضبط للبريد والمواصلات</label><br>
-    <label><input type="radio" name="q7" value="أ"> أ) وزارة الداخلية</label><br>
-    <label><input type="radio" name="q7" value="ج"> ج) الدرك الوطني</label><br>
-    <label><input type="radio" name="q7" value="د"> د) المجلس الشعبي الوطني</label>
-  </div>
-
-  <div class="question">
-    <p>8. في حال خطأ في اسم المستفيد من حوالة، ما الإجراء؟</p>
-    <label><input type="radio" name="q8" value="ج"> ج) إلغاء العملية وإعادة إدخالها بالاسم الصحيح</label><br>
-    <label><input type="radio" name="q8" value="أ"> أ) تمرير الحوالة عادي</label><br>
-    <label><input type="radio" name="q8" value="ب"> ب) تعديل الاسم دون إشعار</label><br>
-    <label><input type="radio" name="q8" value="د"> د) صرف المبلغ مباشرة</label>
-  </div>
-
-  <div class="question">
-    <p>9. ما نوع الشيكات المستعملة في بريد الجزائر؟</p>
-    <label><input type="radio" name="q9" value="أ"> أ) شيكات بريدية فقط</label><br>
-    <label><input type="radio" name="q9" value="ب"> ب) شيكات بنكية</label><br>
-    <label><input type="radio" name="q9" value="ج"> ج) شيكات دولية</label><br>
-    <label><input type="radio" name="q9" value="د"> د) شيكات شركات فقط</label>
-  </div>
-
-  <div class="question">
-    <p>10. ما هو الفرق بين CCP و CNEP؟</p>
-    <label><input type="radio" name="q10" value="ب"> ب) CCP بريد الجزائر، CNEP بنك</label><br>
-    <label><input type="radio" name="q10" value="أ"> أ) نفس الشيء</label><br>
-    <label><input type="radio" name="q10" value="ج"> ج) CNEP للخدمات البريدية</label><br>
-    <label><input type="radio" name="q10" value="د"> د) CCP في الخارج</label>
-  </div>
-
-  <button type="button" onclick="showResult()">عرض النتيجة</button>
-</form>
-
-<div class="result" id="result"></div>
-
-<script>
-  const answers = {
-    q1: "ج", q2: "أ", q3: "ج", q4: "ب", q5: "ب",
-    q6: "أ", q7: "ب", q8: "ج", q9: "أ", q10: "ب"
-  };
-
-  function showResult() {
-    let score = 0;
-    for (let q in answers) {
-      const selected = document.querySelector(input[name="${q}"]:checked);
-      if (selected && selected.value === answers[q]) {
-        score++;
-      }
-    }
-
-    const result = document.getElementById("result");
-    if (score >= 5) {
-      result.innerHTML = ✔️ نتيجتك: ${score}/10 - ناجح;
-      result.className = "result success";
-    } else {
-      result.innerHTML = ❌ نتيجتك: ${score}/10 - راسب;
-      result.className = "result fail";
-    }
-  }
-</script>
-
-</body>
-</html>
-قال ChatGPT:
-تم تعديل الكود بحيث يتم عرض النتيجة في وسط الصفحة مع خلفية صفراء، وبإطار أخضر في حال النجاح أو أحمر في حال الرسوب، مثلما طلبت. هل ترغب في تخصيص لون الخلفية الصفراء بدرجة معينة؟ يمكنك إعطائي كود اللون (مثلاً: #ffee58).
-
-أنت قلت:
-#ffc107
-قال ChatGPT:
-تم تعديل الكود بالفعل ليُظهر النتيجة في وسط الصفحة بلون الخلفية الأصفر #ffc107، مع إطار أخضر للناجحين وإطار أحمر للراسبين. إذا كنت بحاجة لتعديل إضافي مثل:
-
-تغيير حجم أو نوع الخط
-
-إضافة زر "إعادة المحاولة"
-
-تمرير تلقائي للنتيجة عند الضغط على "عرض النتيجة"
-
-فأخبرني، وسأقوم بالتعديل فورًا.
-
-أنت قلت:
-تصحيح الاخطاء
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>اختبار بريد الجزائر - الجانب المالي والإداري</title>
-  <style>
-    body {
-       font-family: 'arial', sans-serif;
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-  direction: rtl;
-    }
-    .header {
-      text-align: right;
-      margin-bottom: 30px;
-    }
-    .header img {
-      width: 900px;  
-  height: auto;  
-  display: block;
-  margin: 0 auto;
-  border-radius: 30px; /* ← لجعل الحواف دائرية */
-    }
-   .title {
-  font-size: 70px;
-  font-weight: bold;
-  margin: 50px auto;       /* ← تصحيح */
-  text-align: center;      /* ← لتوسيط النص نفسه */
-  width: fit-content;      /* ← يجعل العنصر بعرض النص فقط */
-  color: #004a99;
-    }
-    .container {
-      padding: 20px;
-    }
-    .question {
-      background-color: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 5px solid #004a99; /* أزرق داكن */
-      border-right: 20px solid #ffc107; /* أصفر */
-      border-radius: 10px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    .question p {
-      margin: 0 0 10px;
-      font-weight: bold;
-      color: #004a99;
-    }
-    .question label {
-      display: block;
-      margin: 4px 0;
-      cursor: pointer;
-    }
-    h2 {
-      color: #FF0000;
-    }
-   <title>عرض النتيجة</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffc107;
-      font-family: Arial, sans-serif;
-    }
-
-    .result-box {
-      display: none;
-      background-color: #ffc107; /* لون أصفر – يمكنك تغييره */
-      color: #004a99;
-      padding: 15px 30px;
-      font-size: 1.8em;
-      border-radius: 10px;
-      margin: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    button {
-      margin-top: 100px;
-      padding: 30px 60px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    footer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
-  </style>
-</head>
-<body>
-
-  <div class="header">
-    <img src="https://i.postimg.cc/8ChN66JP/Merged-Images.png" alt="شعار بريد الجزائر">
-    <h1 class="title">اختبار بريد الجزائر الرقمي</h1>
-    <h2>ملاحظة: هذا عبارة عن إختبار تجريبي</h2>
-  <!-- الأسئلة -->
- <div class="question">
-    <p>1. زبون فقد بطاقته الذهبية، ما هي أول خطوة يقوم بها؟</p>
-    <label><input type="radio" name="q1" value="ج"> ج) يقوم بتجميد البطاقة ويقدم طلب تعويض</label><br>
-    <label><input type="radio" name="q1" value="أ"> أ) يطلب بطاقة جديدة مباشرة</label><br>
-    <label><input type="radio" name="q1" value="ب"> ب) يودع شكوى في الشرطة فقط</label><br>
-    <label><input type="radio" name="q1" value="د"> د) لا يفعل شيئاً</label>
-  </div>
-
-  <div class="question">
-    <p>2. ما هو رقم الاتصال المجاني لبريد الجزائر؟</p>
-    <label><input type="radio" name="q2" value="أ"> أ) 1530</label><br>
-    <label><input type="radio" name="q2" value="ب"> ب) 1055</label><br>
-    <label><input type="radio" name="q2" value="ج"> ج) 3003</label><br>
-    <label><input type="radio" name="q2" value="د"> د) 112</label>
-  </div>
-
-  <div class="question">
-    <p>3. إذا كان الزبون يعاني من تأخر في تحويل مالي، ما الخطوة الصحيحة؟</p>
-    <label><input type="radio" name="q3" value="ج"> ج) فحص العملية وتقديم تبرير رسمي</label><br>
-    <label><input type="radio" name="q3" value="أ"> أ) إخباره بالانتظار فقط</label><br>
-    <label><input type="radio" name="q3" value="ب"> ب) تجاهل الشكوى</label><br>
-    <label><input type="radio" name="q3" value="د"> د) توجيهه لمكتب آخر عشوائياً</label>
-  </div>
-
-  <div class="question">
-    <p>4. ما هي أقصى مدة صلاحية للبطاقة الذهبية؟</p>
-    <label><input type="radio" name="q4" value="ب"> ب) ثلاث سنوات</label><br>
-    <label><input type="radio" name="q4" value="أ"> أ) سنة</label><br>
-    <label><input type="radio" name="q4" value="ج"> ج) خمس سنوات</label><br>
-    <label><input type="radio" name="q4" value="د"> د) لا تنتهي</label>
-  </div>
-
-  <div class="question">
-    <p>5. ما المقصود بخدمة “BaridiMob”؟</p>
-    <label><input type="radio" name="q5" value="ب"> ب) تطبيق للهاتف يتيح خدمات بريدية ومالية</label><br>
-    <label><input type="radio" name="q5" value="أ"> أ) موقع إلكتروني للتوظيف</label><br>
-    <label><input type="radio" name="q5" value="ج"> ج) خدمة إرسال طرود</label><br>
-    <label><input type="radio" name="q5" value="د"> د) بطاقة دفع دولية</label>
-  </div>
-
-  <div class="question">
-    <p>6. زبون يودع 12000 دج ثم يرسل حوالة بـ 3500 دج ويشتري طوابع بـ 1000 دج، كم يبقى له؟</p>
-    <label><input type="radio" name="q6" value="أ"> أ) 7500 دج</label><br>
-    <label><input type="radio" name="q6" value="ب"> ب) 6500 دج</label><br>
-    <label><input type="radio" name="q6" value="ج"> ج) 8500 دج</label><br>
-    <label><input type="radio" name="q6" value="د"> د) 8000 دج</label>
-  </div>
-
-  <div class="question">
-    <p>7. ما هي المؤسسة التي تنظم قطاع البريد والمواصلات في الجزائر؟</p>
-    <label><input type="radio" name="q7" value="ب"> ب) سلطة الضبط للبريد والمواصلات</label><br>
-    <label><input type="radio" name="q7" value="أ"> أ) وزارة الداخلية</label><br>
-    <label><input type="radio" name="q7" value="ج"> ج) الدرك الوطني</label><br>
-    <label><input type="radio" name="q7" value="د"> د) المجلس الشعبي الوطني</label>
-  </div>
-
-  <div class="q
