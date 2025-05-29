@@ -71,7 +71,7 @@
     .result-box {
       display: none;
       background-color: #ffc107; /* لون أصفر – يمكنك تغييره */
-      color: black;
+      color: #004a99;
       padding: 15px 30px;
       font-size: 1.8em;
       border-radius: 10px;
@@ -82,7 +82,7 @@
 
     button {
       margin-top: 100px;
-      padding: 10px 20px;
+      padding: 30px 60px;
       font-size: 1em;
       cursor: pointer;
     }
@@ -91,7 +91,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
   </style>
 </head>
 <body>
