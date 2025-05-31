@@ -5,30 +5,30 @@
   <title>اختبار بريد الجزائر - الجانب المالي والإداري</title>
   <style>
     body {
-       font-family: 'arial', sans-serif;
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-  direction: rtl;
+      font-family: 'arial', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
     }
     .header {
       text-align: right;
       margin-bottom: 30px;
     }
     .header img {
-      width: 900px;  
-  height: auto;  
-  display: block;
-  margin: 0 auto;
-  border-radius: 30px; /* ← لجعل الحواف دائرية */
+      width: 900px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 30px;
     }
-   .title {
-  font-size: 70px;
-  font-weight: bold;
-  margin: 50px auto;       /* ← تصحيح */
-  text-align: center;      /* ← لتوسيط النص نفسه */
-  width: fit-content;      /* ← يجعل العنصر بعرض النص فقط */
-  color: #004a99;
+    .title {
+      font-size: 70px;
+      font-weight: bold;
+      margin: 50px auto;
+      text-align: center;
+      width: fit-content;
+      color: #004a99;
     }
     .container {
       padding: 20px;
@@ -37,8 +37,8 @@
       background-color: #fff;
       padding: 15px;
       margin-bottom: 15px;
-      border: 5px solid #004a99; /* أزرق داكن */
-      border-right: 20px solid #ffc107; /* أصفر */
+      border: 5px solid #004a99;
+      border-right: 20px solid #ffc107;
       border-radius: 10px;
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     }
@@ -55,6 +55,20 @@
     h2 {
       color: #FF0000;
     }
+    button {
+      padding: 10px 20px;
+      margin: 20px;
+      font-size: 18px;
+      background-color: #004a99;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .result {
+      font-size: 24px;
+      margin: 10px;
+    }
   </style>
 </head>
 <body>
@@ -63,9 +77,10 @@
     <img src="https://i.postimg.cc/8ChN66JP/Merged-Images.png" alt="شعار بريد الجزائر">
     <h1 class="title">اختبار بريد الجزائر الرقمي</h1>
     <h2>ملاحظة: هذا عبارة عن إختبار تجريبي</h2>
+  </div>
+
   <!-- الأسئلة -->
- <!-- أسئلة جديدة -->
- <div id="quiz"></div>
+  <div id="quiz"></div>
   <button onclick="showResult()">عرض النتيجة</button>
   <div class="result" id="result"></div>
 
@@ -76,6 +91,16 @@
   <button onclick="calculateQSM()">احسب النتيجة</button>
   <div class="result" id="output"></div>
 
+  <!-- الكود البرمجي -->
+  <script>
+    const questions = [];
+
+    function addQuestion(q, options, correct) {
+      questions.push({ q, options, correct });
+    }
+
+    // إضافة الأسئلة هنا (اختصرت فقط بعضها كمثال)
+    
     addQuestion("ما هي الوثائق المطلوبة لفتح حساب بريدي جاري؟", ["نسخة من شهادة الميلاد", "الوثيقة CH1 + نسخة من بطاقة الهوية", "بطاقة إقامة", "شهادة عمل"], 1);
     addQuestion("ما هو الحد الأقصى اليومي للتحويل من حساب إلى حساب عبر الصراف؟", ["20,000 دج", "30,000 دج", "50,000 دج", "100,000 دج"], 2);
     addQuestion("ما هي الخدمة التي تسمح بالسحب بدون بطاقة؟", ["Hawalatic", "Cardless", "Flexy", "Edahabia"], 1);
@@ -131,12 +156,12 @@
     addQuestion("كيف يُحسن الموظف علاقته مع زملائه؟", ["التعاون والاحترام", "العمل الفردي فقط", "الغيرة والمنافسة", "التحدث كثيرًا"], 0);
     addQuestion("ما هي العقوبة الإدارية الأخف؟", ["الطرد النهائي", "التوبيخ", "الخصم من الأجر", "التوقيف المؤقت"], 1);
     addQuestion("كيف يمكن تطوير الكفاءة المهنية؟", ["التكوين المستمر", "الراحة فقط", "العمل الروتيني", "تجاهل التعليمات"], 0);
-
+    
     const quizDiv = document.getElementById("quiz");
     questions.forEach((q, i) => {
       const div = document.createElement("div");
       div.className = "question";
-      div.innerHTML = `<h3>س${i+1}: ${q.q}</h3>` + q.options.map((opt, j) => `
+      div.innerHTML = `<h3>س${i + 1}: ${q.q}</h3>` + q.options.map((opt, j) => `
         <label>
           <input type="radio" name="q${i}" value="${j}"> ${opt}
         </label>`).join("");
@@ -177,7 +202,7 @@
       const correct = parseInt(document.getElementById('correct').value);
       const wrong = total - correct;
       const score = correct - wrong;
-      const percent = ((score / total) * 100).toFixed(2);
+      const percent = ((Math.max(score, 0) / total) * 100).toFixed(2);
 
       let message = '';
       if (score < 0) {
@@ -190,4 +215,4 @@
     }
   </script>
 </body>
-      </html>
+</html>
