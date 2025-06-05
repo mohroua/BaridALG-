@@ -583,15 +583,18 @@ function startTimer() {
 
 // دالة جديدة لتحويل الثواني إلى دقائق وثوانٍ
 function updateTimerText() {
-  const timerElement = document.getElementById("timer");
-  const seconds = timers[currentQuestion];
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = seconds % 60;
+  const timerElement = document.getElementById("timer");
+  const seconds = timers[currentQuestion];
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
 
-  timerElement.textContent = `الوقت المتبقي: ${minutes} دقيقة و${remainingSeconds} ثانية`;
-}
+  // نضيف صفر أمام الأرقام الأقل من 10 لجعلها ثنائية الخانة
+  const minStr = minutes.toString().padStart(2, '0');
+  const secStr = remainingSeconds.toString().padStart(2, '0');
+
+  timerElement.textContent = `الوقت المتبقي: ${minStr}:${secStr}`;
+    }
     
-
 
 function disableChoices() {
 
